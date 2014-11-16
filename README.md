@@ -1,14 +1,14 @@
 # go-middleware
 
-An attempt to collect and present all the middlewares that are compatible with http.Handler.
+A collection of middlewares that are compatible with http.Handler.
 
-- [Enable CORS](https://github.com/montanaflynn/go-middleware/blob/master/enable-cors.go)
-- [Log Requests](https://github.com/montanaflynn/go-middleware/blob/master/log-requests.go)
 - [Delay](https://github.com/montanaflynn/go-middleware/blob/master/delay.go)
+- [Log Requests](https://github.com/montanaflynn/go-middleware/blob/master/log-requests.go)
+- [Enable CORS](https://github.com/montanaflynn/go-middleware/blob/master/enable-cors.go)
 
 ### Usage
 
-Here's an example of enabling CORS using all three middlewares together:
+Here's an example of using three middlewares together:
 
 ```go
 package main
@@ -66,6 +66,8 @@ As you can see if you're using multiple middlewares things can quickly become ug
 
 ### Todos
 
-- Add more middlewares and functionality to existing ones
+- Add more middlewares
 - Write examples for HttpRouter, Gin, Goji, Gorilla, etc...
+- Write tests
+- Documentation
 - Create a middleware library that can be imported 
