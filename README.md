@@ -14,6 +14,7 @@ Here's an example of using three middlewares together:
 package main
  
 import (
+    "log"
     "fmt"
     "time"
     "net/http"
@@ -22,6 +23,7 @@ import (
 func enableCORS(handler http.Handler) http.Handler {
     return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
         w.Header().Set("Access-Control-Allow-Origin", "*")
+        w.Header().Set("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT, OPTIONS")
         w.Header().Set("Access-Control-Allow-Headers", "Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization")
         if r.Method == "OPTIONS" {
             w.WriteHeader(200)
